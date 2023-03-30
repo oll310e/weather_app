@@ -1,13 +1,8 @@
 import "./style.css";
+import submitCityInput from "./submitCityInput";
 
-async function getCityWeather(city) {
-  city = city.toLowerCase();
+const form = document.querySelector(".form");
 
-  const response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=5f86822352a641e5bba95540232803&q=${city}`
-  );
-  const json = await response.json();
-  console.log(json.current.condition.text);
-}
-
-getCityWeather("gothenburg");
+form.addEventListener("submit", (event) => {
+  submitCityInput(event);
+});
