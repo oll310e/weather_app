@@ -8,6 +8,20 @@
     <script src="main.js" type="module" defer></script>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <form class="form section">
+        <section>
+          <label for="cityInput">City</label>
+          <input id="cityInput" type="text" placeholder="ex. Gothenburg" />
+        </section>
+        <section><input type="submit" id="submit" /></section>
+      </form>
+      <div class="weatherDisplay section">
+        <p>
+          In <i id="cityText">City Name</i> It is
+          <i id="weatherText">Weather</i>
+        </p>
+      </div>
+    </div>
   </body>
 </html>
